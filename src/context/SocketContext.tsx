@@ -64,7 +64,23 @@ export function SocketProvider({ children }: { children: ReactNode }) {
       setIsOnline(true);
     }
 
+    // Health check polling every 14 seconds
+    const healthCheckInterval = setInterval(async () => {
+      console.log("Health check ping... 14s");
+      try {
+        const res = await fetch('/api/health');
+        if (res.ok) {
+          setIsOnline(true);
+        } else {
+           console.warn("Health check failed");
+        }
+      } catch (error) {
+        console.error("Health check error", error);
+      }
+    }, 14000);
+
     return () => {
+      clearInterval(healthCheckInterval);
       globalSocket?.off("connect", handleConnect);
       globalSocket?.off("disconnect", handleDisconnect);
       globalSocket?.off("connect_error", handleDisconnect);
