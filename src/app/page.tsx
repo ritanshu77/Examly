@@ -41,7 +41,7 @@ export default async function Home() {
 // console.log("----------33-----------------");
 //   if (token) {
 //     try {
-//       const backend = process.env.BACKEND_URL ?? "http://192.168.1.6:3001";
+//       const backend = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://192.168.1.6:3001";
 //       const res = await fetch(`${backend}/auth/validate-token`, {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },

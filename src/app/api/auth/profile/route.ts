@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ success: false, message: "Name, and either Email or Mobile are required" }, { status: 400 });
     }
 
-    const backend = process.env.BACKEND_URL || "http://localhost:3001"; // Fallback if env missing
+    const backend = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001"; // Fallback if env missing
     
     // 1. Validate token to get userId
     const validateRes = await fetch(`${backend}/auth/validate-token`, {

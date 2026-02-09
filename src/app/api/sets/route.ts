@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const backend = process.env.BACKEND_URL || "http://localhost:3001";
+  const backend = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
   const url = `${backend}/questions/sets`;
 
   try {

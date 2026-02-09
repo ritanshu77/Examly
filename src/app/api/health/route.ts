@@ -18,7 +18,7 @@ export async function GET() {
 
   try {
     // Ensure this matches your live backend URL
-    const backendUrl = process.env.BACKEND_URL || "http://localhost:3001"; 
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001"; 
     
     // Set a timeout to detect if server is sleeping
     const controller = new AbortController();

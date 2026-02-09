@@ -45,7 +45,7 @@ export default async function DashboardPage() {
   let user: any = null;
   
   try {
-    const backend = process.env.BACKEND_URL || "http://localhost:3001";
+    const backend = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
     console.log("Fetching from:", backend);
     
     // Add timeout to prevent hanging

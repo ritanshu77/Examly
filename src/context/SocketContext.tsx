@@ -22,10 +22,10 @@ export function SocketProvider({ children }: { children: ReactNode }) {
   const isFirstMount = useRef(true);
 
   useEffect(() => {
-    const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+    const NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
     if (!globalSocket) {
-      globalSocket = io(BACKEND_URL, {
+      globalSocket = io(NEXT_PUBLIC_BACKEND_URL, {
         transports: ["websocket"],
         reconnection: true,
         reconnectionAttempts: Infinity,

@@ -13,7 +13,7 @@ async function isValid(req: NextRequest) {
     const timeoutId = setTimeout(() => controller.abort(), 1500); // 1.5s timeout
 
     try {
-      const backend = process.env.BACKEND_URL || "http://localhost:3001";
+      const backend = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
       const res = await fetch(`${backend}/auth/validate-token`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

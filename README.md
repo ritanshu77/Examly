@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ### Backend validation URL
 
-Set the `BACKEND_URL` environment variable to point to your backend (e.g. `https://api.example.com`); the app will POST to `${BACKEND_URL}/api/validate` to validate the `id` cookie. If not set, it falls back to `http://localhost:8000`.
+Set the `NEXT_PUBLIC_BACKEND_URL` environment variable to point to your backend (e.g. `https://api.example.com`); the app will POST to `${NEXT_PUBLIC_BACKEND_URL}/api/validate` to validate the `id` cookie. If not set, it falls back to `http://localhost:8000`.

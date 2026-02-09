@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const backend = process.env.BACKEND_URL || "http://localhost:3001";
+    const backend = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
     const res = await fetch(`${backend}/auth/validate-token`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
