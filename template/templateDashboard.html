@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fixed Dashboard | Quiz Portal</title>
+    <style>
+        :root {
+            --primary-blue: #008ecc;
+            --success-green: #4caf50;
+            --warning-orange: #ff9800;
+            --bg-gray: #f4f7f6;
+            --text-dark: #333;
+            --error-red: #ff5252;
+        }
+
+        /* 1. Reset & Global Box Sizing (Sabse important fix) */
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            margin: 0; 
+            background: var(--bg-gray); 
+            color: var(--text-dark);
+            overflow-x: hidden; /* Bahar jane se rokne ke liye */
+        }
+
+        /* Navbar */
+        .top-nav {
+            background: white; height: 60px; display: flex; align-items: center;
+            justify-content: space-between; padding: 0 15px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 1000; width: 100%;
+        }
+
+        .toggle-btn { font-size: 24px; cursor: pointer; display: none; border: none; background: none; }
+
+        .wrapper { display: flex; width: 100%; min-height: calc(100vh - 60px); }
+
+        /* Sidebar Navigation */
+        .sidebar { 
+            width: 250px; background: white; border-right: 1px solid #ddd; 
+            padding: 20px 0; transition: 0.3s; flex-shrink: 0; 
+        }
+        .nav-link { 
+            padding: 12px 20px; display: block; text-decoration: none; color: #555; 
+            font-weight: 500; transition: 0.2s; border-left: 4px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active { 
+            background: #f0f7ff; color: var(--primary-blue); border-left-color: var(--primary-blue); 
+        }
+
+        /* Main Content Area */
+        .main-content { 
+            flex: 1; padding: 25px; 
+            width: 100%; /* Ensure it takes available space */
+            max-width: 100vw; 
+        }
+        
+        .welcome-msg { margin-bottom: 25px; }
+        .welcome-msg h1 { margin: 0; color: var(--primary-blue); font-size: 1.6rem; }
+
+        /* Stats Grid - Auto responsive */
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+            gap: 15px; 
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        .stat-card { 
+            background: white; padding: 15px; border-radius: 10px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid #ccc;
+        }
+        .stat-card h3 { margin: 0; font-size: 24px; }
+        .stat-card p { margin: 5px 0 0; color: #777; font-size: 13px; }
+
+        /* Section titles */
+        .section-title { font-size: 16px; font-weight: bold; margin-bottom: 12px; display: block; }
+        .card { 
+            background: white; padding: 15px; border-radius: 10px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px;
+            width: 100%;
+        }
+
+        /* Test List */
+        .test-item { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 12px 0; border-bottom: 1px solid #f0f0f0; gap: 10px;
+        }
+        .test-item:last-child { border: 0; }
+        
+        .btn-start { 
+            background: var(--primary-blue); color: white; padding: 8px 16px; 
+            border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold;
+            white-space: nowrap; flex-shrink: 0;
+        }
+
+        /* Progress Bar Container */
+        .progress-bar { background: #eee; height: 8px; border-radius: 10px; overflow: hidden; margin-top: 5px; }
+        .progress-fill { height: 100%; border-radius: 10px; }
+
+        /* MOBILE FIXES - Child Elements focus */
+        @media (max-width: 768px) {
+            .toggle-btn { display: block; }
+            .sidebar { 
+                position: fixed; left: -260px; height: 100%; z-index: 2000; 
+                box-shadow: 5px 0 15px rgba(0,0,0,0.1); width: 250px;
+            }
+            .sidebar.active { left: 0; }
+            .main-content { padding: 15px; } /* Mobile par kam padding */
+            
+            .stats-grid { grid-template-columns: 1fr; } /* Force single column on mobile */
+            
+            .test-item { 
+                flex-direction: column; /* Child elements stack vertically */
+                align-items: flex-start; 
+                gap: 12px;
+            }
+            .btn-start { width: 100%; text-align: center; } /* Button full width */
+            
+            .top-nav span { display: none; }
+            .welcome-msg h1 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div style="font-weight: bold; color: var(--primary-blue); font-size: 18px;">Quiz App</div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <span>Hello, <b>Ritanshu</b></span>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    </div>
+</nav>
+
+<div class="wrapper">
+    <div class="sidebar" id="sidebar">
+        <a href="#" class="nav-link active">🏠 Dashboard</a>
+        <a href="#" class="nav-link">📝 My Tests</a>
+        <a href="#" class="nav-link">📊 Performance</a>
+        <a href="#" class="nav-link" style="color: var(--error-red); margin-top: 30px;">🚪 Logout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="welcome-msg">
+            <h1>Welcome, Ritanshu! 👋</h1>
+            <p style="font-size: 14px; margin: 5px 0; color: #666;">Ready for today's challenge?</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color: var(--primary-blue);">
+                <h3>12</h3>
+                <p>Total Tests</p>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success-green);">
+                <h3>84%</h3>
+                <p>Avg Score</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; width: 100%;">
+            
+            <span class="section-title">Available Tests</span>
+            <div class="card">
+                <div class="test-item">
+                    <div>
+                        <div style="font-weight: bold; font-size: 15px;">Full Length Mock Test 02</div>
+                        <small style="color: #888;">100 Qs • 90 Mins</small>
+                    </div>
+                    <a href="#" class="btn-start">Start Now</a>
+                </div>
+                <div class="test-item">
+                    <div>
+                        <div style="font-weight: bold; font-size: 15px;">DBMS Practice Set</div>
+                        <small style="color: #888;">20 Qs • 15 Mins</small>
+                    </div>
+                    <a href="#" class="btn-start">Start Now</a>
+                </div>
+            </div>
+
+            <span class="section-title">Recent Activity</span>
+            <div class="card">
+                <div style="margin-bottom: 15px;">
+                    <div style="display:flex; justify-content:space-between; font-size: 13px; margin-bottom: 5px;">
+                        <span>Computer Networks</span>
+                        <b>75/100</b>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: var(--success-green); width: 75%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <div style="display:flex; justify-content:space-between; font-size: 13px; margin-bottom: 5px;">
+                        <span>Data Structures</span>
+                        <b>90/100</b>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: var(--primary-blue); width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    // Modal behavior for mobile: Close sidebar on click outside
+    window.onclick = function(event) {
+        const sidebar = document.getElementById('sidebar');
+        const btn = document.querySelector('.toggle-btn');
+        if (window.innerWidth <= 768 && 
+            sidebar.classList.contains('active') && 
+            !sidebar.contains(event.target) && 
+            event.target !== btn) {
+            sidebar.classList.remove('active');
+        }
+    }
+</script>
+
+</body>
+</html>

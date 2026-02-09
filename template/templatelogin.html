@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Exam Bank</title>
+    <style>
+        :root {
+            --primary-blue: #008ecc;
+            --warning-orange: #ff9800;
+            --bg-gradient:  linear-gradient(135deg, #a1a39a 0%, #6aa24b 100%);
+        }
+
+        * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-gradient);
+            padding: 20px;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h2 { margin-bottom: 25px; color: #333; font-size: 22px; }
+
+        .input-group { margin-bottom: 20px; text-align: left; }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .input-group input:focus { border-color: var(--primary-blue); }
+
+        /* Warning Note Style */
+        .warning-note {
+            background: #fff3e0;
+            border-left: 4px solid var(--warning-orange);
+            padding: 12px;
+            margin-bottom: 25px;
+            text-align: left;
+            border-radius: 6px;
+        }
+
+        .warning-note p {
+            margin: 0;
+            font-size: 13px;
+            color: #e65100;
+            line-height: 1.5;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 142, 204, 0.3);
+        }
+
+        .btn-login:hover { background: #007bb3; transform: translateY(-2px); }
+
+        .footer-text { margin-top: 20px; font-size: 13px; color: #777; }
+
+        @media (max-width: 480px) {
+            .login-card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <span class="logo">Exam Bank</span>
+    <h2>Welcome Back!</h2>
+
+    <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="input-group">
+            <label>Login with Name, Email or Mobile</label>
+            <input type="text" id="userInput" placeholder="Enter details..." required>
+        </div>
+
+    <div class="warning-note" id="nameWarning" style="display: none; padding: 8px 12px; margin-bottom: 20px;">
+    <p style="font-size: 11px; line-height: 1.4; margin: 0;">
+        ⚠️ <strong style="font-size: 11.5px;">Important:</strong> Logging in with your name is a temporary method. Your scorecard may be lost if you clear browser data or change devices.
+    </p>
+</div>
+
+        <button type="submit" class="btn-login">Login Now</button>
+    </form>
+
+    <p class="footer-text">Don't have an account? <a href="#" style="color: var(--primary-blue); text-decoration: none;">Sign Up</a></p>
+</div>
+
+<script>
+    const userInput = document.getElementById('userInput');
+    const warningNote = document.getElementById('nameWarning');
+
+    // Detect if user is typing a name (simple logic: no @ and no numbers)
+    userInput.addEventListener('input', (e) => {
+        const val = e.target.value;
+        const isEmail = val.includes('@');
+        const isMobile = /^\d+$/.test(val);
+
+        if (val.length > 2 && !isEmail && !isMobile) {
+            warningNote.style.display = 'block';
+        } else {
+            warningNote.style.display = 'none';
+        }
+    });
+
+    function handleLogin(event) {
+        event.preventDefault();
+        const value = userInput.value;
+        
+        // Simulating login
+        alert('Logging in with: ' + value);
+        window.location.href = 'templateDashboard.html'; // Dashboard par redirect karein
+    }
+</script>
+
+</body>
+</html>

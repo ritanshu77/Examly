@@ -1,0 +1,287 @@
+{
+  "subject": {
+    "english": "Computer Science",
+    "hindi": "कंप्यूटर विज्ञान"
+  },
+  "units": [
+    {
+      "unit_name": {
+        "english": "Fundamentals of Computer",
+        "hindi": "कंप्यूटर की मूल अवधारणाएँ"
+      },
+      "chapters": [
+        { "english": "Computer System Overview", "hindi": "कंप्यूटर प्रणाली का अवलोकन" },
+        { "english": "Input and Output Devices", "hindi": "इनपुट एवं आउटपुट उपकरण" },
+        { "english": "Number System", "hindi": "संख्या पद्धति" },
+        { "english": "Data Representation", "hindi": "डाटा निरूपण" },
+        { "english": "Data Processing Concepts", "hindi": "डाटा प्रोसेसिंग की अवधारणा" },
+        { "english": "Files and File Types", "hindi": "फाइल एवं फाइल के प्रकार" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Programming Fundamentals",
+        "hindi": "प्रोग्रामिंग की मूल बातें"
+      },
+      "chapters": [
+        { "english": "Introduction to Programming", "hindi": "प्रोग्रामिंग का परिचय" },
+        { "english": "C Programming", "hindi": "सी प्रोग्रामिंग" },
+        { "english": "C++ Programming", "hindi": "सी++ प्रोग्रामिंग" },
+        { "english": "Java Programming", "hindi": "जावा प्रोग्रामिंग" },
+        { "english": "Data Types and Variables", "hindi": "डाटा टाइप एवं वेरिएबल" },
+        { "english": "Control Structures", "hindi": "नियंत्रण संरचनाएँ" },
+        { "english": "Functions and Arrays", "hindi": "फंक्शन एवं एरे" },
+        { "english": "Pointers and Structures", "hindi": "पॉइंटर एवं संरचना" },
+        { "english": "File Handling", "hindi": "फाइल हैंडलिंग" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Object Oriented Programming",
+        "hindi": "ऑब्जेक्ट ओरिएंटेड प्रोग्रामिंग"
+      },
+      "chapters": [
+        { "english": "Objects and Classes", "hindi": "ऑब्जेक्ट एवं क्लास" },
+        { "english": "Inheritance", "hindi": "इनहेरिटेंस" },
+        { "english": "Polymorphism", "hindi": "पॉलीमॉर्फिज्म" },
+        { "english": "Encapsulation", "hindi": "एनकैप्सुलेशन" },
+        { "english": "Abstraction", "hindi": "एब्स्ट्रैक्शन" },
+        { "english": "Exception Handling", "hindi": "एक्सेप्शन हैंडलिंग" },
+        { "english": "Files and Streams", "hindi": "फाइल एवं स्ट्रीम" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Data Structures and Algorithms",
+        "hindi": "डाटा संरचना एवं एल्गोरिदम"
+      },
+      "chapters": [
+        { "english": "Abstract Data Types", "hindi": "एब्स्ट्रैक्ट डाटा टाइप" },
+        { "english": "Arrays", "hindi": "एरे" },
+        { "english": "Linked List", "hindi": "लिंक्ड लिस्ट" },
+        { "english": "Stack", "hindi": "स्टैक" },
+        { "english": "Queue", "hindi": "क्यू" },
+        { "english": "Trees", "hindi": "ट्री" },
+        { "english": "Graphs", "hindi": "ग्राफ" },
+        { "english": "Sorting", "hindi": "सॉर्टिंग" },
+        { "english": "Searching", "hindi": "सर्चिंग" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Operating System",
+        "hindi": "ऑपरेटिंग सिस्टम"
+      },
+      "chapters": [
+        { "english": "Operating System Concepts", "hindi": "ऑपरेटिंग सिस्टम की अवधारणा" },
+        { "english": "Process and Threads", "hindi": "प्रोसेस एवं थ्रेड" },
+        { "english": "CPU Scheduling", "hindi": "सीपीयू शेड्यूलिंग" },
+        { "english": "Deadlocks", "hindi": "डेडलॉक" },
+        { "english": "Memory Management", "hindi": "मेमोरी प्रबंधन" },
+        { "english": "File System", "hindi": "फाइल सिस्टम" },
+        { "english": "Disk Scheduling", "hindi": "डिस्क शेड्यूलिंग" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Database Management System (DBMS)",
+        "hindi": "डाटाबेस प्रबंधन प्रणाली"
+      },
+      "chapters": [
+        { "english": "DBMS Overview", "hindi": "DBMS का परिचय" },
+        { "english": "ER Model", "hindi": "ई-आर मॉडल" },
+        { "english": "Relational Model", "hindi": "रिलेशनल मॉडल" },
+        { "english": "Relational Algebra", "hindi": "रिलेशनल एल्जेब्रा" },
+        { "english": "Relational Calculus", "hindi": "रिलेशनल कैलकुलस" },
+        { "english": "DBMS Keys", "hindi": "DBMS कीज़" },
+        { "english": "Normalization", "hindi": "नॉर्मलाइजेशन" },
+        { "english": "Integrity Constraints", "hindi": "इंटीग्रिटी कंस्ट्रेंट" },
+        { "english": "Transactions", "hindi": "ट्रांजैक्शन" },
+        { "english": "Indexing", "hindi": "इंडेक्सिंग" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Computer Networks",
+        "hindi": "कंप्यूटर नेटवर्क"
+      },
+      "chapters": [
+        { "english": "Data Communication", "hindi": "डाटा संचार" },
+        { "english": "Network Devices", "hindi": "नेटवर्क उपकरण" },
+        { "english": "OSI Model", "hindi": "OSI मॉडल" },
+        { "english": "TCP/IP Model", "hindi": "TCP/IP मॉडल" },
+        { "english": "IP Addressing", "hindi": "आईपी एड्रेसिंग" },
+        { "english": "LAN Technologies", "hindi": "LAN तकनीक" },
+        { "english": "DNS", "hindi": "DNS" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Network Security",
+        "hindi": "नेटवर्क सुरक्षा"
+      },
+      "chapters": [
+        { "english": "Security Services", "hindi": "सुरक्षा सेवाएँ" },
+        { "english": "Symmetric Encryption", "hindi": "सिमेट्रिक एन्क्रिप्शन" },
+        { "english": "Asymmetric Encryption", "hindi": "असिमेट्रिक एन्क्रिप्शन" },
+        { "english": "DES and AES", "hindi": "DES एवं AES" },
+        { "english": "RSA Algorithm", "hindi": "RSA एल्गोरिदम" },
+        { "english": "Firewalls", "hindi": "फायरवॉल" },
+        { "english": "Ethical Hacking", "hindi": "एथिकल हैकिंग" }
+      ]
+    },
+    {
+      "unit_name": {
+        "english": "Web Development",
+        "hindi": "वेब विकास"
+      },
+      "chapters": [
+        { "english": "HTML", "hindi": "HTML" },
+        { "english": "DOM", "hindi": "डॉक्यूमेंट ऑब्जेक्ट मॉडल" },
+        { "english": "CSS", "hindi": "CSS" },
+        { "english": "XML", "hindi": "XML" },
+        { "english": "JavaScript", "hindi": "जावास्क्रिप्ट" },
+        { "english": "PHP", "hindi": "PHP" }
+      ]
+    }
+  ],
+  "paper_1": {
+    "paper_name": {
+      "english": "Paper I",
+      "hindi": "प्रश्न पत्र – I"
+    },
+    "subjects": [
+      {
+        "subject_name": {
+          "english": "Rajasthan General Knowledge",
+          "hindi": "राजस्थान सामान्य ज्ञान"
+        },
+        "units": [
+          {
+            "unit_name": {
+              "english": "Art and Culture of Rajasthan",
+              "hindi": "राजस्थान की कला एवं संस्कृति"
+            },
+            "chapters": [
+              { "english": "Folk Dances", "hindi": "लोक नृत्य" },
+              { "english": "Folk Music", "hindi": "लोक संगीत" },
+              { "english": "Fairs and Festivals", "hindi": "मेले एवं त्यौहार" },
+              { "english": "Costumes and Ornaments", "hindi": "वेश-भूषा एवं आभूषण" },
+              { "english": "Folk Arts", "hindi": "लोक कलाएँ" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "History of Rajasthan",
+              "hindi": "राजस्थान का इतिहास"
+            },
+            "chapters": [
+              { "english": "Ancient Rajasthan", "hindi": "प्राचीन राजस्थान" },
+              { "english": "Medieval Rajasthan", "hindi": "मध्यकालीन राजस्थान" },
+              { "english": "Modern Rajasthan", "hindi": "आधुनिक राजस्थान" },
+              { "english": "Freedom Movement in Rajasthan", "hindi": "राजस्थान में स्वतंत्रता आंदोलन" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "Geography of Rajasthan",
+              "hindi": "राजस्थान का भूगोल"
+            },
+            "chapters": [
+              { "english": "Physiography", "hindi": "भौतिक स्वरूप" },
+              { "english": "Climate", "hindi": "जलवायु" },
+              { "english": "Soil and Vegetation", "hindi": "मृदा एवं वनस्पति" },
+              { "english": "Rivers and Water Resources", "hindi": "नदियाँ एवं जल संसाधन" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "General Science of Rajasthan",
+              "hindi": "राजस्थान का सामान्य विज्ञान"
+            },
+            "chapters": [
+              { "english": "Physics Basics", "hindi": "भौतिकी की मूल बातें" },
+              { "english": "Chemistry Basics", "hindi": "रसायन विज्ञान की मूल बातें" },
+              { "english": "Biology Basics", "hindi": "जीव विज्ञान की मूल बातें" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "Current Affairs of Rajasthan",
+              "hindi": "राजस्थान समसामयिक घटनाएँ"
+            },
+            "chapters": [
+              { "english": "Government Schemes", "hindi": "सरकारी योजनाएँ" },
+              { "english": "Sports and Awards", "hindi": "खेल एवं पुरस्कार" },
+              { "english": "Important Events", "hindi": "महत्वपूर्ण घटनाएँ" }
+            ]
+          }
+        ]
+      },
+      {
+        "subject_name": {
+          "english": "General Ability",
+          "hindi": "सामान्य योग्यता"
+        },
+        "units": [
+          {
+            "unit_name": {
+              "english": "Logical Reasoning",
+              "hindi": "तार्किक क्षमता"
+            },
+            "chapters": [
+              { "english": "Analogy", "hindi": "समानता" },
+              { "english": "Series", "hindi": "श्रृंखला" },
+              { "english": "Classification", "hindi": "वर्गीकरण" },
+              { "english": "Coding-Decoding", "hindi": "कोडिंग-डिकोडिंग" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "Decision Making and Problem Solving",
+              "hindi": "निर्णय क्षमता एवं समस्या समाधान"
+            },
+            "chapters": [
+              { "english": "Decision Making", "hindi": "निर्णय लेना" },
+              { "english": "Problem Solving Techniques", "hindi": "समस्या समाधान तकनीक" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "General Mental Ability",
+              "hindi": "सामान्य मानसिक क्षमता"
+            },
+            "chapters": [
+              { "english": "Memory", "hindi": "स्मरण शक्ति" },
+              { "english": "Attention and Observation", "hindi": "ध्यान एवं अवलोकन" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "Basic Numeracy",
+              "hindi": "मूल संख्यात्मक योग्यता"
+            },
+            "chapters": [
+              { "english": "Number System", "hindi": "संख्या पद्धति" },
+              { "english": "Ratio and Proportion", "hindi": "अनुपात एवं समानुपात" },
+              { "english": "Percentage", "hindi": "प्रतिशत" },
+              { "english": "Average", "hindi": "औसत" }
+            ]
+          },
+          {
+            "unit_name": {
+              "english": "Data Interpretation",
+              "hindi": "डाटा व्याख्या"
+            },
+            "chapters": [
+              { "english": "Tables", "hindi": "तालिका" },
+              { "english": "Bar Graph", "hindi": "बार ग्राफ" },
+              { "english": "Pie Chart", "hindi": "पाई चार्ट" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
