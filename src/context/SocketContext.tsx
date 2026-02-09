@@ -22,7 +22,7 @@ export function SocketProvider({ children }: { children: ReactNode }) {
   const isFirstMount = useRef(true);
 
   useEffect(() => {
-    const NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+    const NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
     if (!globalSocket) {
       globalSocket = io(NEXT_PUBLIC_BACKEND_URL, {
